@@ -14,7 +14,7 @@ pipeline {
 
         stage('Build and Package Application') {
             steps {
-              sh 'mvn clean package'
+              sh 'gradlew build'
 
             }
         }
