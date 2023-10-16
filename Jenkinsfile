@@ -17,11 +17,11 @@ pipeline {
 
         stage('Build and Package Application') {
             steps {
-             {
+             
                  
               sh 'mvn clean packages'
-               }
-            }
+               
+            } 
         }
 
         stage('Build Docker Image') {
