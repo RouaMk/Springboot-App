@@ -15,7 +15,7 @@ pipeline {
 
         stage('Build and Package Application') {
             steps {
-             withMaven(maven: 'mvn') {
+             withMaven(maven: 'maven') {
                  
               sh 'mvn clean packages'
                }
