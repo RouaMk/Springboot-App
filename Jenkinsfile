@@ -1,7 +1,9 @@
 pipeline {
     agent any
 
-   
+   tools {
+    maven 'maven'
+  }
     stages {
         stage('Checkout Code from GitHub') {
             steps {
@@ -15,7 +17,7 @@ pipeline {
 
         stage('Build and Package Application') {
             steps {
-             withMaven(maven: 'maven') {
+             {
                  
               sh 'mvn clean packages'
                }
