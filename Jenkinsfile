@@ -1,9 +1,7 @@
 pipeline {
     agent any
 
-   tools {
-    maven 'maven'
-  }
+  
     stages {
         stage('Checkout Code from GitHub') {
             steps {
@@ -18,7 +16,7 @@ pipeline {
         stage('Build and Package Application') {
             steps {
              
-                 
+            dir('Springboot-App') 
               sh 'mvn clean packages'
                
             } 
