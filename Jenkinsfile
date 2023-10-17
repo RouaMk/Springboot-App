@@ -16,7 +16,7 @@ pipeline {
         stage('Build and Package Application') {
             steps {
              
-            dir('refs/remotes/origin/main/Springboot with Docker') 
+            dir('Springboot with Docker') 
               sh 'mvn clean packages'
                
             } 
